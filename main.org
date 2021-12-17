@@ -1,0 +1,58 @@
+#+TEMPLATE: Annual student review
+#+key: annual-student-review
+#+group: reports
+#+contributor: John Kitchin <jkitchin@andrew.cmu.edu>
+#+default-filename: annual-student-review.org
+
+#+TITLE: Auditory Whale Identification
+#+AUTHOR: Mirjana Erceg, Cumhur Erkut
+
+# Put the packages you need here. Sometimes the order matters.
+#+LATEX_HEADER: \documentclass[12pt]{article}
+#+LATEX_HEADER: \usepackage[top=1in, bottom=1.in, left=1in, right=1in]{geometry}
+#+LATEX_HEADER: \usepackage[sort&compress,super,comma]{natbib}
+#+LATEX_HEADER: \usepackage{natmove}  % move citations after punctuation
+#+LATEX_HEADER: \usepackage[linktocpage, pdfstartview=FitH, colorlinks, linkcolor=blue, anchorcolor=blue, citecolor=blue,  filecolor=blue,  menucolor=blue,  urlcolor=blue]{hyperref}
+#+OPTIONS: toc:nil ^:{}
+
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\end{titlepage}
+
+\setstretch{1.33}
+
+* Introduction
+
+The main paper is {Miller.2021} Focuses on automatic signal processing
+
+There is also {Andreas.2021} for whale communication?
+
+
+
+* Background
+
+Deep learning can be used to automatically extract killer whale sounds from large bioacoustic archives cite:Bergler-2019_orca-spot, which contain environmental sounds. If this approach is successful, it could enable an automated annotation procedure of large bioacoustics databases to extract killer whale sounds, which are essential for subsequent identification of significant _communication patterns_. citep:Bergler-2019_orca-spot train \todo{ what kind?} deep neural networks on 11,509 killer whale (Orcinus orca) signals and 34,848 noise segments, and tested their model on a large-scale bioacoustic repository, with roughly 19,000 hours of killer whale underwater recordings. They achieved 
+- a time-based precision or positive-predictive-value (PPV) of 93.2% and
+- an area-under-the-curve (AUC) of 0.9523. 
+
+
+# This approach enables an automated annotation procedure of large bioacoustics databases to extract killer whale sounds, which are essential for subsequent identification of significant communication patterns. 
+
+The code resides at https://github.com/ChristianBergler/ORCA-SPOT. ORCA-SPOT can be adapted to other animal species.
+
+# https://www.semanticscholar.org/paper/6010d2a11b8bb5fcc85816a9ba8b830fd29afc91
+
+** Beyond CNN
+A typical choice in deep learning is Convolutional Neural Networks (CNNs), although more recently Siamese neural networks outperformed CNNs in acoustic song type detection, classification, and count estimation of blue whale calls cite:Zhong-2021_detec-class. Specifically, the SNN outperformed a CNN with 2% accuracy improvement in population classification and 1.7%-6.4% accuracy improvement in the task of call count estimation for each of the four blue whale population, based on 350 hours of audio data.
+
+
+
+ # Detecting, classifying, and counting blue whale calls with Siamese neural networks.","Ming Zhong, M. Torterotot, T. Branch, K. Stafford, J. Royer, R. Dodhia, J. L. Lavista Ferres",The Journal of the Acoustical Society of America,2021,"The goal of this project is to use acoustic signatures to detect, classify, and count the calls of four acoustic populations of blue whales so that, ultimately, the conservation status of each population can be better assessed.
+
+ # We used manual annotations from 350 h of audio recordings from the underwater hydrophones in the Indian Ocean to build a deep learning model to detect, classify, and count the calls from four acoustic song types. The method we used was Siamese neural networks (SNN), a class of neural network architectures that are used to find the similarity of the inputs by comparing their feature vectors, finding that they outperformed the more widely used convolutional neural networks (CNN).
+
+ # In addition, even though we treat the call count estimation problem as a classification task and encode the number of calls in each spectrogram as a categorical variable, SNN surprisingly learned the ordinal relationship among them. SNN are robust and are shown here to be an effective way to automatically mine large acoustic datasets for blue whale calls.",2,1,10.1121/10.0004828,https://www.semanticscholar.org/paper/308fd757ca487a394b4b21f5f435f5b3990194fc,https://doi.org/10.1121/10.0004828,https://asa.scitation.org/doi/pdf/10.1121/10.0004828,,blue whales,,
+
+ bibliographystyle:ieeetr
+ bibliography:whaleml.bib 
