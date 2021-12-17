@@ -1,3 +1,5 @@
 #+TITLE: Whale ML README.org
 
 
+Checking the orgit commit logging from 
+https://bendersteed.tech/posts/tracking-git-commits-in-org-mode.html
